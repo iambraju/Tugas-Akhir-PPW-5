@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kalkulator JavaScript - Tugas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="calculator-container" role="main">
+    <section class="calculator" aria-label="Kalkulator interaktif">
+     
+      <div class="display-area" role="region" aria-label="Layar kalkulator">
+        <div id="expr" class="expr" aria-live="polite"></div>
+        <input id="display" class="display" value="0" aria-label="Layar hasil" disabled />
+      </div>
+
+      
+      <div class="controls" role="group" aria-label="Kontrol memori dan clear">
+        <div class="control-row">
+          <button id="mc" class="ctrl" title="Memory Clear — hapus semua nilai memory" aria-label="Memory Clear">MC</button>
+          <button id="mr" class="ctrl" title="Memory Recall — ambil nilai memory ke layar" aria-label="Memory Recall">MR</button>
+          <button id="mplus" class="ctrl" title="M+ — tambahkan nilai layar ke memory" aria-label="Memory Add">M+</button>
+          <button id="mminus" class="ctrl" title="M- — kurangi nilai layar dari memory" aria-label="Memory Subtract">M-</button>
+        </div>
+
+        <div class="control-row">
+          <button id="ce" class="ctrl" title="CE — Clear Entry: hapus entri saat ini" aria-label="Clear Entry">CE</button>
+          <button id="c" class="ctrl red" title="C — Clear All: hapus entri dan ekspresi" aria-label="Clear All">C</button>
+
+          <button id="help-toggle" class="ctrl info" title="Tampilkan / sembunyikan penjelasan tombol" aria-label="Toggle bantuan">?</button>
+        </div>
+
+        <div id="help-box" class="help-box" aria-hidden="true">
+          <strong>Penjelasan tombol:</strong>
+          <ul>
+            <li><strong>MC</strong> — Memory Clear: kosongkan memory</li>
+            <li><strong>MR</strong> — Memory Recall: ambil nilai memory ke layar</li>
+            <li><strong>M+</strong> — Memory Add: tambahkan nilai layar ke memory</li>
+            <li><strong>M-</strong> — Memory Subtract: kurangi nilai layar dari memory</li>
+            <li><strong>CE</strong> — Clear Entry: hapus angka yang sedang diketik</li>
+            <li><strong>C</strong> — Clear All: hapus seluruh yang ada (ekspresi + entri)</li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div class="grid" role="group" aria-label="Tombol angka dan operator">
+        <button class="btn op" data-val="÷" title="Bagi (÷)" aria-label="Bagi">÷</button>
+        <button class="btn op" data-val="×" title="Kali (×)" aria-label="Kali">×</button>
+        <button class="btn op" data-val="-" title="Kurang (-)" aria-label="Kurang">-</button>
+        <button class="btn op" data-val="+" title="Tambah (+)" aria-label="Tambah">+</button>
+
+        <button class="btn num" data-val="7" title="7">7</button>
+        <button class="btn num" data-val="8" title="8">8</button>
+        <button class="btn num" data-val="9" title="9">9</button>
+        <button class="btn equal" id="equals" title="Sama dengan" aria-label="Sama dengan">=</button>
+
+        <button class="btn num" data-val="4" title="4">4</button>
+        <button class="btn num" data-val="5" title="5">5</button>
+        <button class="btn num" data-val="6" title="6">6</button>
+
+        <button class="btn num" data-val="1" title="1">1</button>
+        <button class="btn num" data-val="2" title="2">2</button>
+        <button class="btn num" data-val="3" title="3">3</button>
+        <button class="btn num zero" data-val="0" title="0">0</button>
+
+        <button class="btn dot" data-val="." title="Desimal (.)" aria-label="Desimal">.</button>
+      </div>
+
+      <aside class="side" aria-label="Riwayat perhitungan">
+        <h4>History (last 5)</h4>
+        <ul id="history" aria-live="polite"></ul>
+        <button id="clear-history" class="small" title="Hapus riwayat" aria-label="Clear history">Clear History</button>
+
+        <div class="legend-image">
+         
+        
+        </div>
+      </aside>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
