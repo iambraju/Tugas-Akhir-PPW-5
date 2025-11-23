@@ -4,8 +4,6 @@ Nama : Amripin Sukma Braji
 
 # Interactive Calculator 
 
-Versi ini memperjelas area kontrol memori dan tombol clear agar pengguna tidak bingung.
-Semua logic JavaScript ditempatkan di `script.js`.
 
 ## File
 - `index.html` — markup UI
